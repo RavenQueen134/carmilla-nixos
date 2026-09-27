@@ -20,6 +20,13 @@
     };
   };
 
+  programs.libreoffice = {
+    enable = true;
+    settings = {
+      # libreOffice config
+    };
+  };
+
   programs.niri = {
     settings = {
       spawn-at-startup = [
