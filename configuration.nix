@@ -82,9 +82,16 @@
   # };
 
   # i copied this from online but it should fix the dark/light mode randomly swapping on reboot
-  xdg.portal.config.niri = {
-    default = [ "gtk" ];
-    "org.freedesktop.impl.portal.ScreenCast" = [ "gnome" ];
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [ xdg-desktop-portal-gtk ]
+    config = {
+      niri = {
+        default = [ "gnome" "gtk" ];
+        "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
+        "org.freedesktop.impl.portal.ScreenCast" = [ "gnome" ];
+      };
+    };
   };
   programs.niri.enable = true;
   programs.niri.package = pkgs.niri;
