@@ -84,7 +84,7 @@
   # i copied this from online but it should fix the dark/light mode randomly swapping on reboot
   xdg.portal = {
     enable = true;
-    extraPortals = with pkgs; [ xdg-desktop-portal-gtk ]
+    extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
     config = {
       niri = {
         default = [ "gnome" "gtk" ];
