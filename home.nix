@@ -26,7 +26,9 @@
       preset = "transgender";
       mode = "8bit";
       light_dark = "dark";
-      color_align = "horizontal";
+      color_align = {
+        mode = "horizontal";
+      };
     };
   };
 
