@@ -20,6 +20,16 @@
     };
   };
 
+  programs.hyfetch = {
+    enable = true;
+    settings = {
+      preset = "transgender";
+      mode = "8bit";
+      light_dark = "dark";
+      color_align = "horizontal";
+    };
+  };
+
   programs.libreoffice = {
     enable = true;
     settings = {
