@@ -107,6 +107,8 @@
   # Disables the power profile daemon that is part of noctalia's recommended services.
   services.power-profiles-daemon.enable = lib.mkForce false;
   
+  # Thermald proactively prevents Intel CPU overheating
+  services.thermald.enable = true;
   services.tlp = {
     enable = true;
     settings = {
