@@ -124,6 +124,12 @@
       STOP_CHARGE_THRESH_BAT1 = 80;
     };
   };
+  # Handles behavior when laptop lid closed
+  services.logind.settings.Login = {
+    HandleLidSwitch = "lock";
+    HandleLidSwitchExternalPower = "lock";
+    HandleLidSwitchDocked = "ignore";
+  };
 
   services.fwupd.enable = true;
 
