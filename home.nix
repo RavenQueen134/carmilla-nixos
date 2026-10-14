@@ -29,6 +29,7 @@
       color_align = {
         mode = "horizontal";
       };
+      backend = "fastfetch";
     };
   };
 
