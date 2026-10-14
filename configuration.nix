@@ -103,7 +103,28 @@
   };
 
   # List services that you want to enable:
+
+  # Disables the power profile daemon that is part of noctalia's recommended services.
+  services.power-profiles-daemon.enable = lib.mkForce false;
+  
+  services.tlp = {
+    enable = true;
+    settings = {
+      # Operation and Profiles
+      TLP_AUTO_SWITCH = 1;
+      TLP_PROFILE_AC = "PRF";
+      TLP_PROFILE_BAT = "BAL";
+      # Battery Care
+      START_CHARGE_THRESH_BAT0 = 75;
+      STOP_CHARGE_THRESH_BAT0 = 80;
+
+      START_CHARGE_THRESH_BAT1 = 75;
+      STOP_CHARGE_THRESH_BAT1 = 80;
+    };
+  };
+
   services.fwupd.enable = true;
+
   # rtkit (optional, recommended) allows Pipewire to use the realtime scheduler for increased performance.
   security.rtkit.enable = true;
   services.pipewire = {
@@ -114,6 +135,7 @@
     # If you want to use JACK applications, uncomment the following
     # jack.enable = true;
   };
+  
   services.displayManager.noctalia-greeter = {
     enable = true;
     settings = {
