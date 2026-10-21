@@ -103,5 +103,6 @@
   home.packages = with pkgs; [
     firefox
     fastfetch
+    unzip
   ];
 }
