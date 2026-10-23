@@ -103,6 +103,7 @@
   home.packages = with pkgs; [
     firefox
     fastfetch
+    gimp
     unzip
   ];
 }
