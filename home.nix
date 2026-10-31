@@ -101,6 +101,11 @@
   };
 
   home.packages = with pkgs; [
+    # SQL ------
+    dbeaver-bin
+    mycli
+    mysql84
+    # SQL ------
     firefox
     fastfetch
     gimp
